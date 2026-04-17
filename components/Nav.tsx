@@ -43,20 +43,14 @@ export default function Nav() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
-            {transparent ? (
-              <span className={`font-display text-xl font-bold tracking-wide ${textColor}`}>
-                {RESTAURANT.name}
-              </span>
-            ) : (
-              <Image
-                src="/images/Roses_Pizza_final01-1.png"
-                alt="Rose's Pizza"
-                width={140}
-                height={48}
-                className="h-10 w-auto object-contain"
-                priority
-              />
-            )}
+            <Image
+              src="/images/Roses_Pizza_final01-1.png"
+              alt="Rose's Pizza"
+              width={200}
+              height={72}
+              className="h-20 w-auto object-contain shrink-0"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}

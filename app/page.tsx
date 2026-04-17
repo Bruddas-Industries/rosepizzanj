@@ -4,6 +4,7 @@ import { RESTAURANT } from "@/lib/restaurant";
 import { FEATURED_ITEMS } from "@/lib/menu";
 import HoursWidget from "@/components/HoursWidget";
 import OrderCTA from "@/components/OrderCTA";
+import AboutCarousel from "@/components/AboutCarousel";
 
 export default function HomePage() {
   return (
@@ -14,16 +15,14 @@ export default function HomePage() {
           src="/images/DSC0301.jpg"
           alt="Rose's Pizza storefront in Garfield, NJ"
           fill
+          sizes="100vw"
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 bg-black/55" />
 
         <div className="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
-          <p className="text-warm-tan font-semibold uppercase tracking-[0.2em] text-sm mb-4">
-            Garfield, New Jersey · Since 1976
-          </p>
-          <div className="flex justify-center mb-6">
+          {/* <div className="flex justify-center mb-6">
             <Image
               src="/images/Roses_Pizza_final01-1.png"
               alt="Rose's Pizza"
@@ -32,9 +31,14 @@ export default function HomePage() {
               className="w-64 sm:w-80 h-auto drop-shadow-2xl"
               priority
             />
-          </div>
+          </div> */}
           <p className="text-xl sm:text-2xl text-white/85 mb-4 font-display italic">
             {RESTAURANT.tagline}
+          </p>
+          <p className="text-warm-tan font-semibold uppercase tracking-[0.2em] text-xl mb-4">
+            Serving Garfield, New Jersey
+            <br />
+            Since 1976
           </p>
           <div className="flex justify-center mb-8">
             <HoursWidget className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full" />
@@ -131,27 +135,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Kitchen photo */}
-            <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/DSC0377.jpg"
-                alt="Fresh dough being made at Rose's Pizza"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 grid grid-cols-2 gap-3">
-                {[
-                  { num: "Since", label: "1976" },
-                  { num: "100%", label: "Fresh Daily" },
-                ].map(({ num, label }) => (
-                  <div key={label} className="bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 text-center">
-                    <p className="font-display text-xl font-bold text-rose-red">{num}</p>
-                    <p className="text-xs text-charcoal-light">{label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {/* Kitchen photo carousel */}
+            <AboutCarousel />
           </div>
         </div>
       </section>
@@ -178,6 +163,7 @@ export default function HomePage() {
                     src={item.image}
                     alt={item.imageAlt}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover"
                   />
                 </div>
@@ -212,10 +198,10 @@ export default function HomePage() {
         {[
           { src: "/images/DSC0354.jpg", alt: "Rose's Pizza dining room" },
           { src: "/images/DSC0322.jpg", alt: "Pizza preparation at Rose's Pizza" },
-          { src: "/images/DSC0343.jpg", alt: "Antipasto salad at Rose's Pizza" },
+          { src: "/images/DSC0393.jpg", alt: "Rose's Pizza order counter and dining room" },
         ].map(({ src, alt }) => (
           <div key={src} className="relative overflow-hidden">
-            <Image src={src} alt={alt} fill className="object-cover hover:scale-105 transition-transform duration-700" />
+            <Image src={src} alt={alt} fill sizes="33vw" className="object-cover hover:scale-105 transition-transform duration-700" />
           </div>
         ))}
       </section>
@@ -238,12 +224,10 @@ export default function HomePage() {
                 {RESTAURANT.hoursDisplay.map((row) => (
                   <li
                     key={row.days}
-                    className={`flex justify-between text-sm ${
-                      row.hours === "Closed" ? "opacity-50" : ""
-                    }`}
+                    className={`flex justify-between text-sm`}
                   >
                     <span className="text-charcoal-light">{row.days}</span>
-                    <span className={`font-medium ${row.hours === "Closed" ? "text-red-500" : "text-charcoal"}`}>
+                    <span className={`font-medium ${"text-charcoal"}`}>
                       {row.hours}
                     </span>
                   </li>
