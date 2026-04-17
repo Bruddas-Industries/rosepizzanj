@@ -23,7 +23,7 @@ export const RESTAURANT = {
     "https://www.ubereats.com/store/roses-pizza/8Zn4de9tR9mDx4qIoa-m1w",
   googleMapsUrl:
     "https://maps.google.com/?q=73+River+Drive,+Garfield,+NJ+07026",
-  googleMapsEmbed: `https://www.google.com/maps/embed/v1/place?q=73+River+Drive,+Garfield,+NJ+07026&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? ""}`,
+  googleMapsEmbed: `https://www.google.com/maps/embed/v1/place?q=73+River+Drive,+Garfield,+NJ+07026&key=${process.env.MAPS_API_KEY ?? ""}`,
   hours: {
     monday: { open: "10:30", close: "22:00", closed: false },
     tuesday: { open: "10:30", close: "22:00", closed: false },
