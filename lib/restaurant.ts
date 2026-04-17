@@ -6,7 +6,7 @@ export type DayHours = {
 
 export const RESTAURANT = {
   name: "Rose's Pizza",
-  tagline: "Made fresh. Made with love. Since 1976.",
+  tagline: "Made fresh. Made with love. Made for you.",
   about:
     "We've been around for over 40 years and have been using the same, fresh ingredients since day 1. Everything we make is made with love and care. Every order is made like it is made for our family.",
   address: {
@@ -25,18 +25,16 @@ export const RESTAURANT = {
     "https://maps.google.com/?q=73+River+Drive,+Garfield,+NJ+07026",
   googleMapsEmbed: `https://www.google.com/maps/embed/v1/place?q=73+River+Drive,+Garfield,+NJ+07026&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? ""}`,
   hours: {
-    monday: { open: "00:00", close: "00:00", closed: true },
-    tuesday: { open: "10:30", close: "22:00" },
-    wednesday: { open: "10:30", close: "22:00" },
-    thursday: { open: "10:30", close: "22:00" },
-    friday: { open: "10:30", close: "22:30" },
-    saturday: { open: "10:30", close: "22:30" },
-    sunday: { open: "11:30", close: "22:00" },
+    monday: { open: "10:30", close: "22:00", closed: false },
+    tuesday: { open: "10:30", close: "22:00", closed: false },
+    wednesday: { open: "10:30", close: "22:00", closed: false },
+    thursday: { open: "10:30", close: "22:00", closed: false },
+    friday: { open: "10:30", close: "22:00", closed: false },
+    saturday: { open: "10:30", close: "22:00", closed: false },
+    sunday: { open: "11:30", close: "22:00", closed: false },
   } as Record<string, DayHours>,
   hoursDisplay: [
-    { days: "Monday", hours: "Closed" },
-    { days: "Tuesday – Thursday", hours: "10:30 AM – 10:00 PM" },
-    { days: "Friday – Saturday", hours: "10:30 AM – 10:30 PM" },
+    { days: "Monday – Saturday", hours: "10:30 AM – 10:00 PM" },
     { days: "Sunday", hours: "11:30 AM – 10:00 PM" },
   ],
 } as const;

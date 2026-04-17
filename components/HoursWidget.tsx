@@ -30,7 +30,7 @@ function getOpenStatus(): { open: boolean; label: string } {
     return { open: false, label: `Opens at ${fmt(openH, openM)}` };
   }
   if (current >= closeMin) {
-    return { open: false, label: "Closed for today" };
+    return { open: false, label: "Closed" };
   }
   return { open: true, label: `Open until ${fmt(closeH, closeM)}` };
 }
@@ -55,10 +55,10 @@ export default function HoursWidget({ className = "" }: { className?: string }) 
     >
       <span
         className={`w-2 h-2 rounded-full ${
-          status.open ? "bg-green-500" : "bg-red-400"
+          status.open ? "bg-green-500" : "bg-red-500"
         }`}
       />
-      <span className={status.open ? "text-green-700" : "text-red-600"}>
+      <span className={status.open ? "text-green-500" : "text-red-500"}>
         {status.label}
       </span>
     </span>

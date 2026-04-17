@@ -166,21 +166,21 @@ export const MENU: MenuCategory[] = [
 export const FEATURED_ITEMS = [
   {
     name: "Cheese Pizza",
-    description: "Our classic NY-style pizza with fresh sauce and mozzarella. Small, Large, or Sicilian.",
+    description: "A classic favorite, loaded with melted cheese.",
     price: "From $12.00",
-    image: "/images/DSC0318.jpg",
-    imageAlt: "Fresh cheese pizzas at Rose's Pizza",
+    image: "/images/cheese_pizza.jpeg",
+    imageAlt: "Fresh cheese pizza at Rose's Pizza",
   },
   {
     name: "Rose's Special",
-    description: "Our signature pizza with your choice of premium toppings. The house favorite since 1976.",
+    description: "Sicilian square pizza with mozzarella, tomato sauce, pepperoni, onions, mushrooms, green peppers, and black olives.",
     price: "From $20.00",
-    image: "/images/DSC0318.jpg",
+    image: "/images/sicilian_rose_special.jpeg",
     imageAlt: "Rose's Special pizza",
   },
   {
     name: "Italian Hero",
-    description: "Ham, cheese, salami, and cappicola piled high with fresh toppings on a hearty roll.",
+    description: "Toasted bread, ham, cheese, salami, and capicola. Subs Prepared with lettuce, tomato, onion, banana hot peppers, oil, vinegar and oregano.",
     price: "$7.00",
     image: "/images/DSC0305.jpg",
     imageAlt: "Italian hero sub",
@@ -189,7 +189,7 @@ export const FEATURED_ITEMS = [
     name: "Chicken Parmigiana",
     description: "A hot hero classic — crispy chicken with marinara and melted mozzarella.",
     price: "$8.25",
-    image: "/images/DSC0311.jpg",
+    image: "/images/chicken_parm_sub.jpeg",
     imageAlt: "Hot hero sub with melted cheese",
   },
 ];
