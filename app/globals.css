@@ -18,6 +18,29 @@ html {
   scroll-behavior: smooth;
 }
 
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #d4a96a transparent;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  height: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #d4a96a;
+  border-radius: 9999px;
+}
+
 body {
   background-color: #fff8f0;
   color: #2c2c2c;

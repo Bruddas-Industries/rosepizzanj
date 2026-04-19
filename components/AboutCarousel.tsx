@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
-const IMAGES = [
+const IMAGES: { src: string; alt: string; contain?: boolean }[] = [
     { src: "/images/DSC0305.jpg", alt: "Delicious Italian hero with spicy peppers" },
     { src: "/images/DSC0311.jpg", alt: "Delicious Italian hero with spicy peppers smothered with mozzarella cheese" },
     { src: "/images/DSC0318.jpg", alt: "Fresh handmade personal pizzas" },
@@ -16,6 +16,7 @@ const IMAGES = [
     { src: "/images/IMG_3860.jpg", alt: "Delicious spaghetti and chicken cutlet dinner" },
     { src: "/images/IMG_3895.jpg", alt: "Fresh out of the oven Sicilian pizza with sausage" },
     { src: "/images/IMG_3940.jpg", alt: "Fresh out of the oven Sicilian pizza with pepperoni and olives" },
+    { src: "/images/IMG_4313.jpg", alt: "Rose's Pizzeria staff in the kitchen", contain: true },
 ];
 
 export default function AboutCarousel() {
@@ -41,14 +42,14 @@ export default function AboutCarousel() {
           key={img.src}
           className={`absolute inset-0 transition-opacity duration-700 ${
             i === current ? "opacity-100" : "opacity-0"
-          }`}
+          } ${img.contain ? "bg-charcoal" : ""}`}
         >
           <Image
             src={img.src}
             alt={img.alt}
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
+            className={img.contain ? "object-contain" : "object-cover"}
             priority={i === 0}
           />
         </div>
