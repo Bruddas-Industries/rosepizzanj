@@ -15,7 +15,7 @@ export default function ContactPage() {
       {/* Page Header */}
       <section className="relative overflow-hidden pt-28 pb-16 text-white text-center min-h-[320px] flex flex-col justify-center">
         <Image
-          src="/images/DSC0393.jpg"
+          src="/images/DSC0322.jpg"
           alt=""
           fill
           className="object-cover object-center"
@@ -28,7 +28,7 @@ export default function ContactPage() {
           </p>
           <h1 className="font-display text-5xl sm:text-6xl font-bold mb-4">Contact</h1>
           <p className="text-white/80 text-lg max-w-md mx-auto">
-            We&apos;re located in Garfield, NJ — come in, call ahead, or order online.
+            We're located in Garfield, NJ — come in, call ahead, or order online.
           </p>
         </div>
       </section>

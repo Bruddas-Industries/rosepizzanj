@@ -15,7 +15,7 @@ export default function MenuPage() {
       {/* Page Header */}
       <section className="relative overflow-hidden pt-28 pb-16 text-white text-center min-h-[320px] flex flex-col justify-center">
         <Image
-          src="/images/DSC0343.jpg"
+          src="/images/rose_food_display.jpeg"
           alt=""
           fill
           className="object-cover object-center"
