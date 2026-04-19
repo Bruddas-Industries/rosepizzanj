@@ -19,10 +19,10 @@ export const RESTAURANT = {
   phone: "973-773-9205",
   phoneRaw: "9737739205",
   email: "",
-  uberEatsUrl:
-    "https://www.ubereats.com/store/roses-pizza/8Zn4de9tR9mDx4qIoa-m1w",
-  googleMapsUrl:
-    "https://maps.google.com/?q=73+River+Drive,+Garfield,+NJ+07026",
+  uberEatsUrl: "https://www.ubereats.com/store/roses-pizza/8Zn4de9tR9mDx4qIoa-m1w",
+  doorDashUrl: "https://www.doordash.com/store/rose's-pizza-garfield-1580360",
+  grubHubUrl: "https://www.grubhub.com/restaurant/roses-pizzeria-73-river-dr-garfield",
+  googleMapsUrl: "https://maps.google.com/?q=73+River+Drive,+Garfield,+NJ+07026",
   googleMapsEmbed: `https://www.google.com/maps/embed/v1/place?q=73+River+Drive,+Garfield,+NJ+07026&key=${process.env.MAPS_API_KEY ?? ""}`,
   hours: {
     monday: { open: "10:30", close: "22:00", closed: false },

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { RESTAURANT } from "@/lib/restaurant";
 import HoursWidget from "@/components/HoursWidget";
 
@@ -12,14 +13,24 @@ export default function ContactPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-charcoal pt-28 pb-16 text-white text-center">
-        <p className="text-warm-tan font-semibold uppercase tracking-[0.2em] text-sm mb-3">
-          Come Visit Us
-        </p>
-        <h1 className="font-display text-5xl sm:text-6xl font-bold mb-4">Contact</h1>
-        <p className="text-white/70 text-lg max-w-md mx-auto">
-          We&apos;re located in Garfield, NJ — come in, call ahead, or order online.
-        </p>
+      <section className="relative overflow-hidden pt-28 pb-16 text-white text-center min-h-[320px] flex flex-col justify-center">
+        <Image
+          src="/images/DSC0393.jpg"
+          alt=""
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10">
+          <p className="text-warm-tan font-semibold uppercase tracking-[0.2em] text-sm mb-3">
+            Come Visit Us
+          </p>
+          <h1 className="font-display text-5xl sm:text-6xl font-bold mb-4">Contact</h1>
+          <p className="text-white/80 text-lg max-w-md mx-auto">
+            We&apos;re located in Garfield, NJ — come in, call ahead, or order online.
+          </p>
+        </div>
       </section>
 
       {/* Main Content */}

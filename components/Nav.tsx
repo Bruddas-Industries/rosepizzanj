@@ -67,8 +67,7 @@ export default function Nav() {
               </Link>
             ))}
             <a
-              href={RESTAURANT.uberEatsUrl}
-              target="_blank"
+              href="/order"
               rel="noopener noreferrer"
               className="ml-2 px-4 py-2 bg-rose-red text-white text-sm font-semibold rounded-full hover:bg-rose-red-dark transition-colors"
             >
