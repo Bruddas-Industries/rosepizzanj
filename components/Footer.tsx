@@ -52,14 +52,6 @@ export default function Footer() {
 
             <div className="mt-4 flex gap-3">
               <a
-                href={RESTAURANT.uberEatsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-rose-red text-white text-sm font-semibold rounded-full hover:bg-rose-red-dark transition-colors"
-              >
-                Order Online
-              </a>
-              <a
                 href={RESTAURANT.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"

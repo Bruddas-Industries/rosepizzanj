@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { MENU } from "@/lib/menu";
 import OrderCTA from "@/components/OrderCTA";
+import MenuNav from "@/components/MenuNav";
 
 export const metadata: Metadata = {
   title: "Menu | Rose Pizza — Garfield, NJ",
@@ -27,28 +28,25 @@ export default function MenuPage() {
             Fresh &amp; Delicious
           </p>
           <h1 className="font-display text-5xl sm:text-6xl font-bold mb-4">Our Menu</h1>
-          <p className="text-white/80 text-lg max-w-md mx-auto">
+          <p className="text-white/80 text-lg max-w-md mx-auto mb-6">
             Everything made fresh, every day. Just the way it has been for 40 years.
           </p>
+          <a
+            href="/images/rose_menu_4-19-2026.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/40 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors backdrop-blur-sm"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg>
+            View PDF Menu
+          </a>
         </div>
       </section>
 
-      {/* Sticky Category Nav */}
-      <nav className="sticky top-16 z-30 bg-white/95 backdrop-blur border-b border-warm-tan/20 shadow-sm">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-0.5 overflow-x-auto py-2.5 scrollbar-hide">
-            {MENU.map((cat) => (
-              <a
-                key={cat.id}
-                href={`#${cat.id}`}
-                className="shrink-0 px-4 py-1.5 rounded-full text-sm font-medium text-charcoal-light hover:bg-rose-red hover:text-white transition-colors"
-              >
-                {cat.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      </nav>
+      <MenuNav categories={MENU} />
 
       {/* Menu Sections */}
       {MENU.map((category, idx) => (
@@ -80,7 +78,7 @@ export default function MenuPage() {
                 {category.sizes.map((size) => (
                   <span
                     key={size}
-                    className="text-[11px] font-bold uppercase tracking-widest text-charcoal-light/60 min-w-[52px] text-center"
+                    className="text-[11px] font-bold uppercase tracking-widest text-charcoal-light/60 min-w-[72px] text-center"
                   >
                     {size}
                   </span>
@@ -120,7 +118,7 @@ export default function MenuPage() {
                           {priceParts.map((p, i) => (
                             <span
                               key={i}
-                              className="font-bold text-rose-red text-sm min-w-[52px] text-center tabular-nums"
+                              className="font-bold text-rose-red text-sm min-w-[72px] text-center tabular-nums"
                             >
                               {p}
                             </span>

@@ -45,8 +45,7 @@ export default function HomePage() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={RESTAURANT.uberEatsUrl}
-              target="_blank"
+              href="/order"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-rose-red text-white font-bold rounded-full text-lg hover:bg-rose-red-dark transition-colors shadow-lg"
             >
