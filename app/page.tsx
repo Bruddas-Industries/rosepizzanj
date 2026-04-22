@@ -22,16 +22,6 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/55" />
 
         <div className="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
-          {/* <div className="flex justify-center mb-6">
-            <Image
-              src="/images/Roses_Pizza_final01-1.png"
-              alt="Rose's Pizza"
-              width={320}
-              height={110}
-              className="w-64 sm:w-80 h-auto drop-shadow-2xl"
-              priority
-            />
-          </div> */}
           <p className="text-xl sm:text-2xl text-white/85 mb-4 font-display italic">
             {RESTAURANT.tagline}
           </p>

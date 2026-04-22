@@ -63,8 +63,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/40">
-          <p>© {new Date().getFullYear()} {RESTAURANT.name}. All rights reserved.</p>
+        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/40">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 text-center sm:text-left">
+            <p>© {new Date().getFullYear()} {RESTAURANT.name}. All rights reserved.</p>
+            <span className="hidden sm:inline text-white/20">·</span>
+            <p>
+              Made with ❤️ by{" "}
+              <a
+                href="https://bruddasindustries.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white/70 transition-colors underline underline-offset-2"
+              >
+                Bruddas Industries
+              </a>
+            </p>
+          </div>
           <nav className="flex gap-4">
             <Link href="/" className="hover:text-white/70 transition-colors">Home</Link>
             <Link href="/menu" className="hover:text-white/70 transition-colors">Menu</Link>

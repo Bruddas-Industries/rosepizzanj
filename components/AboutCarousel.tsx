@@ -16,7 +16,7 @@ const IMAGES: { src: string; alt: string; contain?: boolean }[] = [
     { src: "/images/IMG_3860.jpg", alt: "Delicious spaghetti and chicken cutlet dinner" },
     { src: "/images/IMG_3895.jpg", alt: "Fresh out of the oven Sicilian pizza with sausage" },
     { src: "/images/IMG_3940.jpg", alt: "Fresh out of the oven Sicilian pizza with pepperoni and olives" },
-    { src: "/images/IMG_4313.jpg", alt: "Rose's Pizzeria staff in the kitchen", contain: true },
+    { src: "/images/IMG_4313.jpg", alt: "The legacy behind Rose's Pizzeria", contain: true },
 ];
 
 export default function AboutCarousel() {
