@@ -123,8 +123,7 @@ export default function OrderCTA({
   if (variant === "floating") {
     return (
       <a
-        href={RESTAURANT.uberEatsUrl}
-        target="_blank"
+        href="/order"
         rel="noopener noreferrer"
         className={`fixed bottom-6 right-6 z-40 flex items-center gap-2 px-5 py-3 bg-rose-red text-white font-bold rounded-full shadow-lg hover:bg-rose-red-dark transition-colors ${className}`}
       >
