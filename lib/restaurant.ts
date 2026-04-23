@@ -8,7 +8,7 @@ export const RESTAURANT = {
   name: "Rose's Pizza",
   tagline: "Made fresh. Made with love. Made for you.",
   about:
-    "We've been around for over 40 years and have been using the same, fresh ingredients since day 1. Everything we make is made with love and care. Every order is made like it is made for our family.",
+    "We've been around for over 50 years and have been using the same, fresh ingredients since day 1. Everything we make is made with love and care. Every order is made like it is made for our family.",
   address: {
     street: "73 River Drive",
     city: "Garfield",
