@@ -29,7 +29,7 @@ export default function MenuPage() {
           </p>
           <h1 className="font-display text-5xl sm:text-6xl font-bold mb-4">Our Menu</h1>
           <p className="text-white/80 text-lg max-w-md mx-auto mb-6">
-            Everything made fresh, every day. Just the way it has been for 40 years.
+            Everything made fresh, every day. Just the way it has been for over 50 years.
           </p>
           <a
             href="/images/rose_menu_4-19-2026.pdf"
